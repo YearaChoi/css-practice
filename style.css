@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;900&display=swap");
+
+body {
+  margin: 0;
+  background-image: url(./images/pattern-background-desktop.svg);
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: hsl(225, 100%, 94%);
+}
+
+.title,
+.plan {
+  color: hsl(223, 47%, 23%);
+  letter-spacing: 0.3px;
+}
+
+.detail,
+.detail_2,
+.cancel,
+.price .plan div:last-child {
+  color: hsl(228, 11%, 53%);
+  letter-spacing: 0.3px;
+}
+
+.grid {
+  max-width: 490px;
+  place-items: center;
+  display: grid;
+  grid-template-rows: 1fr 1.8fr;
+  margin: 3.7em auto;
+  /* 위, 아래 여백 설정하고 나머지는 자동 */
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 30px;
+  box-shadow: 0px 40px 40px -40px hwb(243 60% 13%);
+}
+
+.dance {
+  border-radius: 30px 30px 0px 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.gridItem {
+  text-align: center;
+  padding: 3em 0em 2em 0em;
+  font-family: "Red+Hat+Display", sans-serif;
+  letter-spacing: 1.25;
+  line-height: 1.45;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 30px;
+  padding-bottom: 14px;
+}
+
+.detail {
+  font-weight: 500;
+  padding: 0px 50px 25px 50px;
+  font-size: 17px;
+}
+
+.detail_2 {
+  display: none;
+}
+
+.price {
+  background-color: hsl(225, 80%, 98%);
+  border-radius: 15px;
+  margin-bottom: 1.8em;
+  padding: 1.5em 1em 1.5em 1em;
+
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+}
+
+.price .musicIcon {
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-right: 2px;
+}
+.price .plan {
+  text-align: left;
+  line-height: 1.5;
+  font-weight: 900;
+  font-size: 18px;
+  padding-right: 40px;
+}
+
+.price .plan div:last-child {
+  font-weight: 500;
+}
+
+.price .change {
+  font-weight: 700;
+  font-size: 16px;
+  color: hsl(228, 63%, 45%);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.payment {
+  padding: 1em 0em 1em 0em;
+  background-color: hsl(253, 76%, 45%);
+  font-weight: 900;
+  color: aliceblue;
+  text-align: center;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0px 27px 27px -10px hwb(243 60% 13%);
+}
+
+.cancel {
+  padding-top: 2em;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.attribution {
+  padding-bottom: 10px;
+}
+
+@media (max-width: 375px) {
+  /* 모바일 사이즈 */
+  body {
+    background-image: url(./images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+  }
+
+  .grid {
+    display: block;
+    margin: 3em 1.5em;
+  }
+
+  .gridItem {
+    text-align: center;
+    padding: 1.5em 0em 2em 0em;
+  }
+
+  .detail {
+    display: none;
+  }
+
+  .detail_2 {
+    display: block;
+    font-weight: 500;
+    padding-bottom: 25px;
+  }
+
+  .price {
+    padding: 1.2em 1em 1.2em 1em;
+    margin: 0px 20px 20px 20px;
+  }
+
+  .price .musicIcon {
+    vertical-align: bottom;
+    padding-right: 20px;
+  }
+
+  .price .plan {
+    padding-right: 30px;
+  }
+
+  .payment {
+    margin: 0px 20px 0px 20px;
+  }
+
+  .attribution {
+    display: none;
+  }
+}
